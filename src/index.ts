@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { copyFileSync, existsSync } from 'fs'
 import { createServer } from 'http'
 import * as jsDAV_Locks_Backend_FS from 'jsDAV/lib/DAV/plugins/locks/fs'
@@ -17,7 +19,7 @@ if (!existsSync(configFile)) {
 	copyFileSync(join(__dirname, '../resource/default-config.yml'), configFile)
 }
 
-const config = YAML.load(configFile)
+const config = YAML.load(configFile) || {}
 const port = config.port || 8090
 const host = config.host || '0.0.0.0'
 const nodes: MountNode[] = config.nodes || []
