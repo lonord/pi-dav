@@ -1,0 +1,10 @@
+# pi-dav configuration file
+#
+# example:
+# port: 8090         # default 8090
+# host: 0.0.0.0      # default 0.0.0.0
+# nodes
+#   - path: /media/disk
+#     mount: /disk
+#   - path: /media/disk2
+#     mount: /disk2

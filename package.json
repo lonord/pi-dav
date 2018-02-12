@@ -1,0 +1,33 @@
+{
+  "name": "@lonord/pi-dav",
+  "version": "1.0.0",
+  "description": "A WebDAV server",
+  "bin": {
+    "pi-dav": "lib/index.js"
+  },
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@lonord.name:/~/pi-dav.git"
+  },
+  "keywords": [
+    "WebDAV"
+  ],
+  "author": "Loy B. <lonord@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^9.4.5",
+    "@types/yamljs": "^0.2.30",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "commander": "^2.14.1",
+    "jsDAV": "^0.3.4",
+    "mkdirp": "^0.5.1",
+    "yamljs": "^0.3.0"
+  }
+}
